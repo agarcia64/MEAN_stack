@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     return "test";
 });
 
-/* POST test page */
+/* POST ps3 page */
 router.post('/', function(req, res){
     console.log("Post");
     let og = req.body;
