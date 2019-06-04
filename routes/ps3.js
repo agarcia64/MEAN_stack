@@ -11,4 +11,17 @@ router.get('/', function(req, res, next) {
     return "test";
 });
 
+/* POST test page */
+router.post('/', function(req, res){
+    console.log("Post");
+    let og = req.body;
+
+    res.render("ps3c", {
+        original: JSON.stringify(og)
+    });
+
+    console.log(JSON.stringify(og));
+    return og;
+});
+
 module.exports = router;

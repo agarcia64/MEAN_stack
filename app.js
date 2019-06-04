@@ -26,10 +26,11 @@ app.use('/users', usersRouter);
 app.use('/ps3', ps3Router);
 app.use('/ps3c', testRouter);
 
-/* POST test page */
+/*
+// POST test page
 app.post('/ps3', function(req, res){
   console.log("Post");
-  let og = {key: "Hello", value: 5};
+  let og = req.body;
 
   res.render("ps3c", {
     original: JSON.stringify(og)
@@ -38,7 +39,7 @@ app.post('/ps3', function(req, res){
   console.log(JSON.stringify(og));
   return og;
 });
-
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
