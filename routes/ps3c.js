@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+
+/* GET test page. */
+router.get('/', function(req, res) {
+    console.log("Get");
+    res.render("ps3c", {
+        original: "Get"
+    });
+});
+
+module.exports = router;
