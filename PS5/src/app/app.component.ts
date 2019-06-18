@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LOCATIONS } from './LOCATIONS-MOCK';
 import { LOCATION } from './LOCATIONS';
+import { TweetsService } from './tweets.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,12 @@ import { LOCATION } from './LOCATIONS';
 export class AppComponent {
   title = 'PS5';
   locations = LOCATIONS;
+
+  randomQuote: string;
+
+  constructor(private tweetsService: TweetsService) { }
+
+  getTweet() {
+    this.tweetsService.generateTweet();
+  }
 }
